@@ -41,7 +41,7 @@ export default function Home() {
             title="Indoor"
             color="#00E676"
             icon={<FontAwesome5 name="home" size={40} />}
-             onPress={() => router.push('/indoorscreen')}
+             
           />
 
         </View>
@@ -52,6 +52,7 @@ export default function Home() {
             title="Scene AI"
             color="#2979FF"
             icon={<FontAwesome5 name="camera" size={40} />}
+            onPress={() => router.push('/sceneai')}
           />
 
           <MenuButton
