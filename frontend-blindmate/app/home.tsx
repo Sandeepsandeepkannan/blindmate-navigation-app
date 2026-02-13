@@ -34,7 +34,7 @@ export default function Home() {
             title="Navigation"
             color="#FFD700"
             icon={<MaterialCommunityIcons name="navigation-variant" size={45} />}
-            onPress={() => router.push('/navigation')}
+            onPress={() => router.push('/listening')}
           />
 
           <MenuButton
@@ -63,6 +63,12 @@ export default function Home() {
 
       </View>
 
+      {/* Tap to Speak Footer Button */}
+      <TouchableOpacity style={styles.voiceButton}>
+        <FontAwesome5 name="microphone" size={24} color="white" />
+        <Text style={styles.voiceButtonText}>Tap to Speak</Text>
+      </TouchableOpacity>
+
     </View>
   );
 }
@@ -85,12 +91,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#050A18',
     padding: 20,
+    paddingBottom: 40, // Added padding to give the footer button breathing room
   },
 
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 40,
+    marginTop: 20, // Added small top margin for status bar clearance
   },
 
   location: {
@@ -120,5 +128,27 @@ const styles = StyleSheet.create({
   cardText: {
     fontSize: 18,
     fontWeight: 'bold',
+  },
+
+  // Added Styles for the Voice Button
+  voiceButton: {
+    backgroundColor: '#7B61FF',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    paddingVertical: 20,
+    borderRadius: 30,
+    shadowColor: '#7B61FF',
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.5,
+    shadowRadius: 15,
+    elevation: 10,
+  },
+  voiceButtonText: {
+    color: 'white',
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginLeft: 15,
   },
 });
