@@ -41,6 +41,7 @@ export default function Home() {
             title="Indoor"
             color="#00E676"
             icon={<FontAwesome5 name="home" size={40} />}
+             onPress={() => router.push('/indoorscreen')}
           />
 
         </View>
@@ -57,6 +58,7 @@ export default function Home() {
             title="SOS"
             color="#FF3D00"
             icon={<MaterialIcons name="error-outline" size={45} />}
+             onPress={() => router.push('/emergencyscreen')}
           />
 
         </View>
